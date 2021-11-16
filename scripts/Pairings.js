@@ -13,6 +13,14 @@ document.addEventListener("click", (clickEvent) => {
                 window.alert(`${kid.name} wish is to ${kid.wish}`)
             }
         }
+    } else if (itemClicked.id.startsWith("star")) {
+        const [, starId] = itemClicked.id.split("--")
+
+        for (const celeb of celebrities){
+            if(celeb.id === parseInt(starId)) {
+                window.alert(`${celeb.name} is a ${celeb.sport}`)
+            }
+        }
     }
 })
 
