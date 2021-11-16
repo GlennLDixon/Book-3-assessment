@@ -3,6 +3,19 @@ import { getChildren, getCelebrities } from "./database.js"
 const kids = getChildren()
 const celebrities = getCelebrities()
 
+document.addEventListener("click", (clickEvent) => {
+    const itemClicked = clickEvent.target
+    if(itemClicked.id.startsWith("child")) {
+        const [, childId] = itemClicked.id.split("--")
+
+        for (const kid of kids){
+            if(kid.id === parseInt(childId)) {
+                window.alert(`${kid.name} wish is to ${kid.wish}`)
+            }
+        }
+    }
+})
+
 const findCelebrityMatch = (kidObject, celebrityArray) => {
     let celebrity = null
 
