@@ -6,11 +6,13 @@ const celebrities = getCelebrities()
 const findCelebrityMatch = (kidObject, celebrityArray) => {
     let celebrity = null
 
-    for (const celebrity of celebrityArray) {
-
+    for (const star of celebrityArray) {
+        if (star.id === kidObject.celebrityId) {
+            celebrity = star
+        }
     }
 
-    return celebritiy
+    return celebrity
 }
 
 export const Pairings = () => {
@@ -18,10 +20,10 @@ export const Pairings = () => {
     html = "<ul>"
 
     for (const kid of kids) {
-        const kidsStar = findCelebrityMatch(kid, celebrities)
+        const kidsStar = findCelebrityMatch(kids, celebrities)
         html += `
             <li>
-                ${kid.name} will be making memories with ${kidsStar.name}, a ${kidsStar.Sport} star, by ${kid.wish}
+                ${kid.name} will be making memories with ${kidsStarr.name}, a ${kidsStar.Sport} star, by ${kid.wish}
             </li>
         `
     }
