@@ -10,7 +10,7 @@ document.addEventListener("click", (clickEvent) => {
 
         for (const kid of kids){
             if(kid.id === parseInt(childId)) {
-                window.alert(`${kid.name} wish is to ${kid.wish}`)
+                window.alert(`${kid.name} has a wish ${kid.wish}`)
             }
         }
     } else if (itemClicked.id.startsWith("star")) {
@@ -18,7 +18,7 @@ document.addEventListener("click", (clickEvent) => {
 
         for (const celeb of celebrities){
             if(celeb.id === parseInt(starId)) {
-                window.alert(`${celeb.name} is a ${celeb.sport}`)
+                window.alert(`${celeb.name} is ${celeb.sport} star`)
             }
         }
     }
