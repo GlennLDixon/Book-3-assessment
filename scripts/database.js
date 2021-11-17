@@ -28,7 +28,7 @@ const database = {
         id: 6,
         name: "Bernie Dreger",
         email: "bdreger5@zimbio.com",
-        sport: "Gymnastics"
+        sport: "Drive a race car"
     }, {
         id: 7,
         name: "Rolando Gault",
